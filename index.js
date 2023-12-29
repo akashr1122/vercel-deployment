@@ -1,5 +1,5 @@
 // const app = require('./src/app.js');
-const port = process.env.PORT || 8001;
+const port = 5000 || 8001;
 
 const express       = require('express');
 var bodyParser      = require('body-parser');
@@ -14,7 +14,7 @@ app.use(cors());
 dotenv.config();
 
 // Connection to MongoDB server
-MongoClient.connect(process.env.MONGO_URI,{useNewUrlParser:true, useUnifiedTopology: true},function(){
+MongoClient.connect("mongodb+srv://doadmin:F0874THYZf9g26V5@db-mongodb-blr1-06419-041483cf.mongo.ondigitalocean.com/t2p?authSource=admin",{useNewUrlParser:true, useUnifiedTopology: true},function(){
     console.log('Connect to MongoDB');
 });
 
