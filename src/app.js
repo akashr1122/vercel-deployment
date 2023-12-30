@@ -9,6 +9,11 @@ app.use(cors());
 
 // Enable environment variable
 dotenv.config();
+app.use(
+    cors({
+      origin: "*",
+    })
+  );
 
 // Connection to MongoDB server
 MongoClient.connect(process.env.MONGO_URI,{useNewUrlParser:true, useUnifiedTopology: true},function(){
